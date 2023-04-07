@@ -10,15 +10,6 @@ os.environ['PROJECT_PATH'] = os.path.dirname(os.path.abspath(__file__))
 
 from lib.api import server
 
-#创建配置文件对象
-file = '../config/config.ini'
-con = configparser.ConfigParser()
-con.read(file, encoding='utf-8')
-
-#读取系统变量
-SERVER_PORT = os.environ.get("SERVER_PORT")
-if SERVER_PORT == None:
-    SERVER_PORT = con.get('global', 'server_port')
 
 #启动命令
 #gunicorn Alertmanager-repeater:server -w 6 -b 0.0.0.0:$SERVER_PORT
