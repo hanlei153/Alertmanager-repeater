@@ -3,7 +3,7 @@
 
 ### 克隆存储库
 
-    git clone https://github.com/henlei153/Alertmanager-repeater.git
+    git clone https://github.com/hanlei153/Alertmanager-repeater.git
 ### 运行转发器，将$SERVER_PORT替换为你想监听的端口，-w用来指定worker进程的数量
     cd Alertmanager-repeater/bin
     gunicorn Alertmanager-repeater:server -w 6 -b 0.0.0.0:$SERVER_PORT
