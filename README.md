@@ -4,7 +4,8 @@
 ### 克隆存储库
     git clone https://github.com/hanlei153/Alertmanager-repeater.git
 ### 配置转发器
-    vim config/config.ini
+    cd Alertmanager-repeater/config
+    vim config.ini
         #0 表示告警，1表示开启告警，bot_url设置为机器人的webhook的地址
         feishu = 0
         bot_url = https:xxxx...
