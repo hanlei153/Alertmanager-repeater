@@ -6,7 +6,7 @@
 ### 配置转发器
     cd Alertmanager-repeater/config
     vim config.ini
-        #0 表示告警，1表示开启告警，bot_url设置为机器人的webhook的地址
+        #0表示关闭告警，1表示开启告警，bot_url设置为机器人的webhook的地址
         feishu = 0
         bot_url = https:xxxx...
 ### 运行转发器，将$SERVER_PORT替换为你想监听的端口，-w用来指定worker进程的数量
