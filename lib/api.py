@@ -260,3 +260,9 @@ def dingding_hook():
     else:
         print({"msg_error": "请检查dingding配置是否打开！"})
         return json.dumps({"msg":"配置错误，请检查dingding配置是否打开！"}, ensure_ascii=False)
+
+
+#api健康检查接口
+@server.route('/api/health', methods=['get'])
+def health():
+    return json.dumps({'status': 'OK'})
