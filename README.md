@@ -9,6 +9,8 @@
         #0表示关闭告警，1表示开启告警，bot_url设置为机器人的webhook的地址
         feishu = 0
         bot_url = https:xxxx...
+    cd Alertmanager-repeater
+    pip3 install gunicorn && pip3 install -r requirements.txt
 ### 运行转发器，将$SERVER_PORT替换为你想监听的端口，-w用来指定worker进程的数量
     cd Alertmanager-repeater/bin
     gunicorn Alertmanager-repeater:server -w 6 -b 0.0.0.0:$SERVER_PORT
