@@ -1,5 +1,5 @@
 # Alertmanager-repeater
-#### Alertmanager-repeater是一个可以将prometheus告警转发至飞书、钉钉、企业微信的一个告警转发器，实现告警功能
+#### Alertmanager-repeater使用Flask框架，是一个可以将prometheus告警转发至飞书、钉钉、企业微信的一个告警转发器，实现告警功能
 
 ### 克隆存储库
     git clone https://github.com/hanlei153/Alertmanager-repeater.git
@@ -18,7 +18,9 @@
 ### 容器运行，容器默认运行在8080端口，如果需要修改请更改dockerfile中的ENV
     cd Alertmanager-repeater
     docker build -t image:tag .
-    docker run -it --name container_name -p port:port image:tag
+    docker run -it --name container_name -v ./config:/opt/Alertmanager-repeater/config -p port:port image:tag
+### 配置config.ini文件中的机器人地址，然后重启容器
+    docker restart container_name
 ### Alertmanager配置文件中修改webhook配置，钉钉创建机器人时需要设置关键词为 Prometheus ，飞书不需要设置关键词
     "receivers":
     - "name": "prometheus-feishu-webhook"
