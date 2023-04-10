@@ -2,8 +2,12 @@
 #### Alertmanager-repeater是一个可以将prometheus告警转发至飞书、钉钉、企业微信的一个告警转发器，实现告警功能
 
 ### 克隆存储库
-
     git clone https://github.com/hanlei153/Alertmanager-repeater.git
+### 配置转发器
+    vim config/config.ini
+        #0 表示告警，1表示开启告警，bot_url设置为机器人的webhook的地址
+        feishu = 0
+        bot_url = https:xxxx...
 ### 运行转发器，将$SERVER_PORT替换为你想监听的端口，-w用来指定worker进程的数量
     cd Alertmanager-repeater/bin
     gunicorn Alertmanager-repeater:server -w 6 -b 0.0.0.0:$SERVER_PORT
