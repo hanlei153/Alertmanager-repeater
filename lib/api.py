@@ -10,8 +10,7 @@ con = configparser.ConfigParser()
 
 #读取配置文件
 config_path = config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'config', 'config.ini')
-print(config_path)
-con.read('config_path', encoding='utf-8')
+con.read(config_path, encoding='utf-8')
 
 #获取所有section
 sections = con.sections()
