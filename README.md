@@ -24,3 +24,4 @@
       - "url": "http://IP:port/api/feishu"    #飞书告警地址
       - "url": "http://IP:port/api/dingding"  #钉钉告警地址
 
+### 企业微信告警暂不可用，正在开发中...
