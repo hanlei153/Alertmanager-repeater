@@ -29,3 +29,6 @@
       - "url": "http://IP:port/api/dingding"  #钉钉告警地址
 
 ### 企业微信告警暂不可用，正在开发中...
+
+### 健康检查接口
+    http://IP:port/api/health  #返回值为{'status': 'OK'}
