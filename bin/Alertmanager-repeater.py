@@ -14,9 +14,9 @@ from lib.api import server
 #启动命令
 #gunicorn Alertmanager-repeater:server -w 6 -b 0.0.0.0:$SERVER_PORT
 
-
-# if __name__ == '__main__':
-#     server.run(
-#         host='0.0.0.0',
-#         port=SERVER_PORT,
-#     )
+SERVER_PORT = 8081
+if __name__ == '__main__':
+    server.run(
+        host='0.0.0.0',
+        port=SERVER_PORT,
+    )
