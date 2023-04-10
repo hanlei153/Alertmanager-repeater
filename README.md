@@ -12,7 +12,7 @@
     cd Alertmanager-repeater
     docker build -t image:tag .
     docker run -it --name container_name -p port:port image:tag
-### Alertmanager配置文件中修改webhook配置，创建机器人时需要设置关键字为Prometheus才可以成功告警
+### Alertmanager配置文件中修改webhook配置，钉钉创建机器人时需要设置关键词为 Prometheus ，飞书不需要设置关键词
     "receivers":
     - "name": "prometheus-feishu-webhook"
       "webhook_configs":
